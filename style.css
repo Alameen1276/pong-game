@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #00ff00;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+
+.score-section {
+    background: rgba(0, 255, 0, 0.1);
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid #00ff00;
+}
+
+.score-section .label {
+    color: #00ff00;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.score-section .score {
+    color: #00ff00;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.game-board {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: #000;
+    border: 3px solid #00ff00;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        #00ff00 0px,
+        #00ff00 15px,
+        transparent 15px,
+        transparent 30px
+    );
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+.paddle {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ff00;
+    top: 160px;
+}
+
+.paddle-left {
+    left: 15px;
+}
+
+.paddle-right {
+    right: 15px;
+}
+
+.ball {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #00ff00;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff00;
+    top: 194px;
+    left: 394px;
+}
+
+.instructions {
+    color: #00ff00;
+    font-size: 0.9em;
+    line-height: 1.8;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+.instructions strong {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+@media (max-width: 900px) {
+    .game-board {
+        width: 600px;
+        height: 300px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .score-section .score {
+        font-size: 2.5em;
+    }
+}
